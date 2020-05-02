@@ -1,15 +1,6 @@
 // Initializing fs.ReadStream API.
-// Function dependents: randPersonObj, randShortWord, randMedWord, randLongWord, randWord
 
 const fs = require('fs')
-
-// Returns a random integer >= 0 < max
-
-const randNumFloor = max => Math.floor(Math.random() * max)
-
-// Returns a random integer > 0 <= max
-
-const randNumCeil = max => Math.ceil(Math.random() * max) 
 
 // Returns an array with the length and content passed in
 
@@ -20,6 +11,26 @@ const arrayGen = (content, length) => {
     }
     return rArray
 }
+
+// Returns an object with given parameters
+// Must pass in 2 arrays of equal length
+// Key in keys array will be assigned value at the same index of values array
+
+const objGen = (keys, values) => {
+    let rObj = {}
+    for (let i = 0; i < keys.length; i++) {
+        rObj[keys[i]] = values[i]
+    }
+    return rObj
+}
+
+// Returns a random integer >= 0 < max
+
+const randNumFloor = max => Math.floor(Math.random() * max)
+
+// Returns a random integer > 0 <= max
+
+const randNumCeil = max => Math.ceil(Math.random() * max) 
 
 // Returns a random phone number string
 
@@ -41,6 +52,7 @@ const randSsn = () => {
     return `${arr[0]}${arr[1]}${arr[2]}-${arr[3]}${arr[4]}-${arr[5]}${arr[6]}${arr[7]}${arr[8]}`
 }
 
+
 // Returns a random person object using the attached txt files for first/last name
 // firstnames.txt and lastnames.txt must be in the same directory as the .js file
 // Person Object Structure:
@@ -54,7 +66,6 @@ const randSsn = () => {
 // }
   
 const randPersonObj = () => {
-    
     let firstNamesArray = fs.readFileSync("firstnames.txt").toString().split("\r\n")
     let lastNamesArray = fs.readFileSync("lastnames.txt").toString().split("\r\n")
     let first = firstNamesArray[randNumFloor(2000)]
@@ -104,3 +115,19 @@ const randWord = () => {
     return wordArr[randNumFloor(wordArr.length)]
 }
 
+// Exports functions to be used in playground file
+
+module.exports = {
+    randNumFloor,
+    randNumCeil,
+    arrayGen,
+    objGen,
+    randPhoneNum,
+    randSsn,
+    randPersonObj,
+    randShortWord,
+    randShortWord,
+    randMedWord,
+    randLongWord,
+    randWord
+}

@@ -2,14 +2,19 @@
 The goal of this repo is to create a set functions that generate random datatypes students can use while learning the fundamentals of JavaScript. The functions must easy to use and must generate data that helps students further their understanding.
 
 ## Function List
-- randNumFloor(max)
-    - Returns a random integer >= 0 and < max
-- randNumCeil(max)
-    - Returns a random integer > 0 and <= max
 - arrayGen(content, length)
     - Returns an array
     - content: What will be placed at each index of the returned array
     - length: Number representing length of the returned array
+- objGen(keys, values)
+    - Returns an object
+    - keys: Array containing keys
+    - values: Array containing values
+    - Key in the keys array will be assigned a value at the SAME index of the values array
+- randNumFloor(max)
+    - Returns a random integer >= 0 and < max
+- randNumCeil(max)
+    - Returns a random integer > 0 and <= max
 - randPhoneNum()
     - Returns a string of random numbers in the following format:
     '123-456-7890'
