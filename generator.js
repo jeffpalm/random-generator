@@ -68,8 +68,8 @@ const randSsn = () => {
 const randPersonObj = () => {
     let firstNamesArray = fs.readFileSync("firstnames.txt").toString().split("\r\n")
     let lastNamesArray = fs.readFileSync("lastnames.txt").toString().split("\r\n")
-    let first = firstNamesArray[randNumFloor(2000)]
-    let last = lastNamesArray[randNumFloor(1000)]
+    let first = firstNamesArray[randNumFloor(firstNamesArray.length)]
+    let last = lastNamesArray[randNumFloor(lastNamesArray.length)]
     return {
         first,
         last,
