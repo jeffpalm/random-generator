@@ -47,23 +47,7 @@ The goal of this repo is to create a set functions that generate random datatype
 [![Run on Repl.it](https://repl.it/badge/github/palmytree/random-generator)](https://repl.it/github/palmytree/random-generator)
 - Use playground file to call functions about using supplied 'gen' object.
 ```JS
-gen.randNumFloor()
-```
-
-
-**Returns an array with 100 people objects**
-```JS
-arrayGen(randPersonObj(), 100)
-```
-
-**Returns an array with 100 random words**
-```JS
-arrayGen(randWord(), 100)
-```
-
-**Returns an array with between 1 and 100 random words 9+ characters long**
-```JS
-arrayGen(randLongWord(), randNumCeil(100))
+gen.randNumFloor(100)
 ```
 
 ## Resources

@@ -2,12 +2,22 @@
 
 const fs = require('fs')
 
-// Returns an array with the length and values passed in
+// Returns an array with the length and random string/object function passed in
 
-const arrayGen = (values, length) => {
+const arrayGen = (valuesFn, length) => {
     let rArray = []
     for (let i = 0; i < length; i++) {
-        rArray.push(values)
+        rArray.push(valuesFn())
+    }
+    return rArray
+}
+
+// Returns an array of numbers
+
+const numArrayGen = (max, length) => {
+    let rArray = []
+    for (let i = 0; i < length; i++) {
+        rArray.push(Math.floor(Math.random()*max))
     }
     return rArray
 }
@@ -66,8 +76,8 @@ const randSsn = () => {
 // }
   
 const randPersonObj = () => {
-    let firstNamesArray = fs.readFileSync("firstnames.txt").toString().split("\r\n")
-    let lastNamesArray = fs.readFileSync("lastnames.txt").toString().split("\r\n")
+    let firstNamesArray = fs.readFileSync("firstnames.txt").toString().split("\n")
+    let lastNamesArray = fs.readFileSync("lastnames.txt").toString().split("\n")
     let first = firstNamesArray[randNumFloor(firstNamesArray.length)]
     let last = lastNamesArray[randNumFloor(lastNamesArray.length)]
     return {
@@ -87,21 +97,21 @@ const randPersonObj = () => {
 // Returns a random word 1-4 characters long
 
 const randShortWord = () => {
-    let wordArr = fs.readFileSync("google-10000-english-usa-no-swears-short.txt").toString().split("\r\n")
+    let wordArr = fs.readFileSync("google-10000-english-usa-no-swears-short.txt").toString().split("\n")
     return wordArr[randNumFloor(wordArr.length)]
 }
 
 // Returns a random word 5-8 characters long
 
 const randMedWord = () => {
-    let wordArr = fs.readFileSync("google-10000-english-usa-no-swears-medium.txt").toString().split("\r\n")
+    let wordArr = fs.readFileSync("google-10000-english-usa-no-swears-medium.txt").toString().split("\n")
     return wordArr[randNumFloor(wordArr.length)]
 }
 
 // Returns a random word 9+ characters long
 
 const randLongWord = () => {
-    let wordArr = fs.readFileSync("google-10000-english-usa-no-swears-long.txt").toString().split("\r\n")
+    let wordArr = fs.readFileSync("google-10000-english-usa-no-swears-long.txt").toString().split("\n")
     return wordArr[randNumFloor(wordArr.length)]
 }
 
@@ -121,6 +131,7 @@ module.exports = {
     randNumFloor,
     randNumCeil,
     arrayGen,
+    numArrayGen,
     objGen,
     randPhoneNum,
     randSsn,
