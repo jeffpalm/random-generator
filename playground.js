@@ -6,3 +6,6 @@ const gen = require('./generator')
 // To call function : gen.functionName()
 // Ex: gen.randPersonObj() returns a randome person Object
 
+// YOUR CODE BELOW --------------------------------------
+// 'Happy Hacking' - dad
+

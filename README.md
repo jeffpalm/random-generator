@@ -44,6 +44,13 @@ The goal of this repo is to create a set functions that generate random datatype
     - Returns a random word
 
 ## Example Uses
+[![Run on Repl.it](https://repl.it/badge/github/palmytree/random-generator)](https://repl.it/github/palmytree/random-generator)
+- Use playground file to call functions about using supplied 'gen' object.
+```JS
+gen.randNumFloor()
+```
+
+
 **Returns an array with 100 people objects**
 ```JS
 arrayGen(randPersonObj(), 100)
