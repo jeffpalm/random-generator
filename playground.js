@@ -1,10 +1,19 @@
 // Imports generator functions to use in playground
 const gen = require('./generator')
 
-// How to use:
-// Refer to README for available functions
-// To call function : gen.functionName()
-// Ex: gen.randPersonObj() returns a randome person Object
+// Available functions: 
+// gen.arrayGen(values, length)
+// gen.objGen(keys, values)
+// gen.randNumFloor(max)
+// gen.randNumCeil(max)
+// gen.randPhoneNum()
+// gen.randSsn()
+// gen.randPersonObj()
+// gen.randShortWord()
+// gen.randShortWord()
+// gen.randMedWord()
+// gen.randLongWord()
+// gen.randWord()
 
 // YOUR CODE BELOW --------------------------------------
 // 'Happy Hacking' - dad

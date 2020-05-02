@@ -2,12 +2,12 @@
 
 const fs = require('fs')
 
-// Returns an array with the length and content passed in
+// Returns an array with the length and values passed in
 
-const arrayGen = (content, length) => {
+const arrayGen = (values, length) => {
     let rArray = []
     for (let i = 0; i < length; i++) {
-        rArray.push(content)
+        rArray.push(values)
     }
     return rArray
 }

@@ -2,9 +2,9 @@
 The goal of this repo is to create a set functions that generate random datatypes students can use while learning the fundamentals of JavaScript. The functions must easy to use and must generate data that helps students further their understanding.
 
 ## Function List
-- arrayGen(content, length)
+- arrayGen(values, length)
     - Returns an array
-    - content: What will be placed at each index of the returned array
+    - values: What will be placed at each index of the returned array
     - length: Number representing length of the returned array
 - objGen(keys, values)
     - Returns an object
