@@ -6,22 +6,9 @@ The goal of this repo is to create a set functions that generate random datatype
     - Returns an array
     - values: What will be placed at each index of the returned array
     - length: Number representing length of the returned array
-- objGen(keys, values)
-    - Returns an object
-    - keys: Array containing keys
-    - values: Array containing values
-    - Key in the keys array will be assigned a value at the SAME index of the values array
-- randNumFloor(max)
-    - Returns a random integer >= 0 and < max
-- randNumCeil(max)
-    - Returns a random integer > 0 and <= max
-- randPhoneNum()
-    - Returns a string of random numbers in the following format:
-    '123-456-7890'
-- randSsn()
-    - Returns a string of random numbers in the following format:
-    '123-12-1234'
-- randPersonObj()
+- randNum(min, max)
+    - Returns random integer between min and max
+- Person()
     - Returns a single object in the following format:
     ```
     {
