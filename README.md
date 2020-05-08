@@ -34,7 +34,7 @@ The goal of this repo is to create a set functions that generate random datatype
 [![Run on Repl.it](https://repl.it/badge/github/palmytree/random-generator)](https://repl.it/github/palmytree/random-generator)
 - Use playground file to call functions about using supplied 'gen' object.
 ```JS
-gen.randNumFloor(100)
+gen.randNum(100, 200)
 ```
 
 ## Resources
